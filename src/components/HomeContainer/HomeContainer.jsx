@@ -3,7 +3,7 @@ import Hero from '../../img/heroBg.png'
 import {heropData} from '../../utils/data'
 const HomeContainer = () => {
     return (
-    <section className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full p-15" id='home'>
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full p-15 h-100%" id='home'>
         <div className="py-2 flex-1 flex-col items-start md:items-start justify-center gap-6">
             <div className='flex items-center gap-2 justify-center bg-orange-100 px-4 py-1 rounded-full my-5'>
             <p className='text-base text-orange-500 font-semibold'>Bike Delivery</p>
@@ -27,7 +27,7 @@ const HomeContainer = () => {
                     <img src={n.imageSrc} alt="I1" className='w-20 lg:w-40'/>
                     <p className='font-semibold text-textColor text-base lg:text-xl mt-2 lg:mt-4 '>{n.name}</p>
                     <p className='text-[12px] text-lighttextGray font-semibold lg:text-sm my-1 lg:my-3'>{n.decp}</p>
-                    <p className='text-sm fonst-semibold text-headingColor'><span className='text-xs text-red-600'>$</span>{n.price}</p>
+                    <p className='text-sm fonst-semibold text-headingColor'><span className='text-xs text-red-600'>$</span> {n.price}</p>
                 </div> 
                 ))}
               </div>

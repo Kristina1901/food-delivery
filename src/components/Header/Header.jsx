@@ -59,7 +59,7 @@ const Header = () => {
         <img src={user? user.photoURL : Avatar} alt='avatar' className='w-10 min-w-[40px] h-10 min-h-[40px] mx-5 rounded-full'/>
         {isMenu && (<div className='w-40 bg-gray-50 shadow-xl rounded-lg absolute top-12 right-0 flex flex-col px-4 py-2'>
             { user && user.email ==="ktuzova1901@gmail.com" && (
-            <Link to={"./createItem"}>
+            <Link to={"/CreateContainer"}>
             <p className='px-4 py-2 flex items-center gap-2 text-textColor text-base'>New Item <FaAd/></p>
             </Link>
             )
@@ -83,15 +83,12 @@ const Header = () => {
         <img src={user? user.photoURL : Avatar} alt='avatar' className='w-10 min-w-[40px] h-10 min-h-[40px] mx-5 rounded-full'/>
         {isMenu && (<div className='w-40 bg-gray-50 shadow-xl rounded-lg absolute top-12 right-0 flex flex-col px-4 py-2'>
             { user && user.email ==="ktuzova1901@gmail.com" && (
-            <Link to={"./createItem"}>
-            <p className='px-4 py-2 flex items-center gap-2 text-textColor text-base'>New Item <FaAd/></p>
+            <Link to={"/CreateContainer"}>
+            <p className='px-4 py-2 flex items-center gap-2 text-textColor text-base' onClick={()=>{setIsMenu()}}>New Item <FaAd/></p>
             </Link>
             )
             }
-        <div className='relative flex items-center justify-center'>
-        <FaShoppingCart className='text-textColor text-2xl ml-8 cursor-pointer'/>
-         </div>
-         <ul className='flex  flex-col px-4 py-2'>
+            <ul className='flex  flex-col px-4 py-2'>
             <li className='text-base text-textColor hover:text-headingColor cursor-pointer duration-100 transition-all ease-in-out'>Home</li>
             <li className='text-base text-textColor hover:text-headingColor cursor-pointer duration-100 transition-all ease-in-out'>Menu</li>
             <li className='text-base text-textColor hover:text-headingColor cursor-pointer duration-100 transition-all ease-in-out'>About us</li>
